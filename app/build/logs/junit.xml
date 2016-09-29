@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Brandalley Unit Tests" tests="116" assertions="300" failures="0" errors="0" time="326.624665">
+    <testsuite name="App\Tests\Functional\Api\Account\AddressTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/AddressTest.php" tests="2" assertions="4" failures="0" errors="0" time="112.019382">
+      <testcase name="testAddress" class="App\Tests\Functional\Api\Account\AddressTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/AddressTest.php" line="17" assertions="3" time="110.462377"/>
+      <testcase name="testPutAddress" class="App\Tests\Functional\Api\Account\AddressTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/AddressTest.php" line="31" assertions="1" time="1.557005"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Account\CommandTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/CommandTest.php" tests="2" assertions="3" failures="0" errors="0" time="2.254936">
+      <testcase name="testGetOrders" class="App\Tests\Functional\Api\Account\CommandTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/CommandTest.php" line="16" assertions="2" time="0.827888"/>
+      <testcase name="testGetAllOrdersAction" class="App\Tests\Functional\Api\Account\CommandTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/CommandTest.php" line="30" assertions="1" time="1.427048"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Account\CouponTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/CouponTest.php" tests="1" assertions="6" failures="0" errors="0" time="1.365905">
+      <testcase name="testGetCoupon" class="App\Tests\Functional\Api\Account\CouponTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/CouponTest.php" line="16" assertions="6" time="1.365905"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Account\LoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/LoginTest.php" tests="2" assertions="5" failures="0" errors="0" time="1.557702">
+      <testcase name="testLogin" class="App\Tests\Functional\Api\Account\LoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/LoginTest.php" line="16" assertions="3" time="0.789491"/>
+      <testcase name="testAccount" class="App\Tests\Functional\Api\Account\LoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/LoginTest.php" line="35" assertions="2" time="0.768211"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Account\NewsletterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/NewsletterTest.php" tests="1" assertions="3" failures="0" errors="0" time="0.975091">
+      <testcase name="testNewsletter" class="App\Tests\Functional\Api\Account\NewsletterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/NewsletterTest.php" line="16" assertions="3" time="0.975091"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/PersonalInfoTest.php" tests="4" assertions="7" failures="0" errors="0" time="3.565451">
+      <testcase name="testDashboard" class="App\Tests\Functional\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/PersonalInfoTest.php" line="15" assertions="4" time="0.741067"/>
+      <testcase name="testPutInfosAction" class="App\Tests\Functional\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/PersonalInfoTest.php" line="32" assertions="1" time="0.893096"/>
+      <testcase name="testPutEmailAction" class="App\Tests\Functional\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/PersonalInfoTest.php" line="51" assertions="2" time="1.689537"/>
+      <testcase name="testPutPasswordAction" class="App\Tests\Functional\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/PersonalInfoTest.php" line="74" assertions="0" time="0.241751"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Account\WishlistTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/WishlistTest.php" tests="1" assertions="5" failures="0" errors="0" time="6.153760">
+      <testcase name="testGetWishlist" class="App\Tests\Functional\Api\Account\WishlistTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Account/WishlistTest.php" line="16" assertions="5" time="6.153760"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Cart\Add\CouponController" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Cart/Add/CouponTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.817364">
+      <testcase name="testNewAction" class="App\Tests\Functional\Api\Cart\Add\CouponController" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Cart/Add/CouponTest.php" line="13" assertions="2" time="0.817364"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Cart\ShowTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Cart/showTest.php" tests="3" assertions="11" failures="0" errors="0" time="3.647542">
+      <testcase name="testCreate" class="App\Tests\Functional\Api\Cart\ShowTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Cart/showTest.php" line="39" assertions="3" time="1.279956"/>
+      <testcase name="testList" class="App\Tests\Functional\Api\Cart\ShowTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Cart/showTest.php" line="71" assertions="4" time="1.227904"/>
+      <testcase name="testError" class="App\Tests\Functional\Api\Cart\ShowTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Cart/showTest.php" line="99" assertions="4" time="1.139682"/>
+    </testsuite>
+    <testsuite name="App\Controller\Functional\Api\Contact\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Contact/ContactTest.php" tests="1" assertions="3" failures="0" errors="0" time="1.334891">
+      <testcase name="testServiceClientAction" class="App\Controller\Functional\Api\Contact\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Contact/ContactTest.php" line="15" assertions="3" time="1.334891"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Countries\CountriesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Countries/CountriesTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.695645">
+      <testcase name="testGetCountriesAction" class="App\Tests\Functional\Api\Countries\CountriesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Countries/CountriesTest.php" line="24" assertions="2" time="0.695645"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Images\ImagesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Images/ImagesTest.php" tests="3" assertions="8" failures="0" errors="0" time="21.321048">
+      <testcase name="testProductAction" class="App\Tests\Functional\Api\Images\ImagesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Images/ImagesTest.php" line="23" assertions="2" time="17.697410"/>
+      <testcase name="testVpAction" class="App\Tests\Functional\Api\Images\ImagesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Images/ImagesTest.php" line="44" assertions="4" time="2.198684"/>
+      <testcase name="testHomeAction" class="App\Tests\Functional\Api\Images\ImagesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Images/ImagesTest.php" line="82" assertions="2" time="1.424954"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\InscriptionTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/InscriptionTest.php" tests="1" assertions="7" failures="0" errors="0" time="1.829962">
+      <testcase name="testInscription" class="App\Tests\Functional\Api\InscriptionTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/InscriptionTest.php" line="16" assertions="7" time="1.829962"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Product\CatalogueTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/CatalogueTest.php" tests="5" assertions="18" failures="0" errors="0" time="6.676809">
+      <testcase name="testSearchAction" class="App\Tests\Functional\Api\Product\CatalogueTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/CatalogueTest.php" line="19" assertions="2" time="2.033953"/>
+      <testcase name="testLiveSearchAction" class="App\Tests\Functional\Api\Product\CatalogueTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/CatalogueTest.php" line="33" assertions="3" time="0.846592"/>
+      <testcase name="testFilterAction" class="App\Tests\Functional\Api\Product\CatalogueTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/CatalogueTest.php" line="49" assertions="4" time="1.060163"/>
+      <testcase name="testListAction" class="App\Tests\Functional\Api\Product\CatalogueTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/CatalogueTest.php" line="66" assertions="4" time="0.932339"/>
+      <testcase name="testVplistAction" class="App\Tests\Functional\Api\Product\CatalogueTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/CatalogueTest.php" line="81" assertions="5" time="1.803762"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Product\HomepageTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/HomepageTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.726051">
+      <testcase name="testHome" class="App\Tests\Functional\Api\Product\HomepageTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/HomepageTest.php" line="20" assertions="2" time="0.726051"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Product\ProductTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/ProductTest.php" tests="1" assertions="2" failures="0" errors="0" time="14.002521">
+      <testcase name="testShippingAction" class="App\Tests\Functional\Api\Product\ProductTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Product/ProductTest.php" line="27" assertions="2" time="14.002521"/>
+    </testsuite>
+    <testsuite name="App\Controller\Functional\Api\Security\FacebookLoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Security/FacebookLoginTest.php" tests="1" assertions="2" failures="0" errors="0" time="0.835407">
+      <testcase name="testLoginAction" class="App\Controller\Functional\Api\Security\FacebookLoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/Security/FacebookLoginTest.php" line="15" assertions="2" time="0.835407"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\SpecialOffers\SpecialOffersTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/SpecialOffers/SpecialOffersTest.php" tests="1" assertions="4" failures="0" errors="0" time="0.973196">
+      <testcase name="testIndexAction" class="App\Tests\Functional\Api\SpecialOffers\SpecialOffersTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Api/SpecialOffers/SpecialOffersTest.php" line="14" assertions="4" time="0.973196"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\App\ServicesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/App/ServicesTest.php" tests="1" assertions="4" failures="0" errors="0" time="1.378875">
+      <testcase name="testServices" class="App\Tests\Functional\App\ServicesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/App/ServicesTest.php" line="16" assertions="4" time="1.378875"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" tests="32" assertions="132" failures="0" errors="0" time="99.039229">
+      <testcase name="testAttributes" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="22" assertions="3" time="0.009120"/>
+      <testcase name="testGet" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="33" assertions="1" time="1.084614"/>
+      <testcase name="testGetJson" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="43" assertions="0" time="2.045422"/>
+      <testcase name="testGetHomepage" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="49" assertions="1" time="2.250298"/>
+      <testcase name="testGetUnivers" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="59" assertions="1" time="2.248377"/>
+      <testcase name="testGetProductpage" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="66" assertions="1" time="1.982946"/>
+      <testcase name="testGetPrivateSalepage" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="73" assertions="1" time="0.037991"/>
+      <testcase name="testGetComparioProducts" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="83" assertions="0" time="1.671821"/>
+      <testcase name="testGetElementsToList" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="91" assertions="1" time="1.584826"/>
+      <testcase name="testGetProductsAttributes" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="103" assertions="1" time="1.541577"/>
+      <testcase name="testGetProductAttributes" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="114" assertions="3" time="1.050671"/>
+      <testcase name="testGetProductAttributesLookUp" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="138" assertions="3" time="1.063066"/>
+      <testcase name="testGetProductsSearchAttributes" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="152" assertions="3" time="0.616858"/>
+      <testcase name="testGetProductsToList" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="168" assertions="90" time="19.517593"/>
+      <testcase name="testSearch" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="185" assertions="4" time="17.160538"/>
+      <testcase name="testGetBreadcrumb" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="205" assertions="3" time="3.570605"/>
+      <testcase name="testGetMenu" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="220" assertions="0" time="0.260611"/>
+      <testcase name="testGetMenuResponse" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="242" assertions="1" time="0.782077"/>
+      <testcase name="testGetComparioMenuResponse" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="249" assertions="1" time="0.865695"/>
+      <testcase name="testGetKitMedia" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="259" assertions="1" time="22.831856"/>
+      <testcase name="testGetHistoryProducts" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="266" assertions="2" time="3.316021"/>
+      <testcase name="testGetCartElements" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="282" assertions="0" time="0.255059"/>
+      <testcase name="testGetProductsLookUp" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="310" assertions="2" time="2.586990"/>
+      <testcase name="testGetCrawler" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="326" assertions="1" time="1.986517"/>
+      <testcase name="testGetDOMXPath" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="332" assertions="1" time="1.788134"/>
+      <testcase name="testGetCurrentUnivers" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="338" assertions="0" time="0.254779"/>
+      <testcase name="testGetEspaceId" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="348" assertions="1" time="2.033969"/>
+      <testcase name="testGetTrends" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="355" assertions="4" time="2.427056"/>
+      <testcase name="testGetLastTrends" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="368" assertions="1" time="0.740932"/>
+      <testcase name="testGetTrendsEditorial" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="378" assertions="1" time="0.952126"/>
+      <testcase name="testSetSessionMenu" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="386" assertions="0" time="0.258785"/>
+      <testcase name="testGetSessionMenu" class="App\Tests\Functional\Compario\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ClientTest.php" line="403" assertions="0" time="0.262299"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Compario\LiveSearchClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/LiveSearchClientTest.php" tests="1" assertions="7" failures="0" errors="0" time="0.080846">
+      <testcase name="testGetLiveResults" class="App\Tests\Functional\Compario\LiveSearchClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/LiveSearchClientTest.php" line="18" assertions="7" time="0.080846"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Compario\ResponseFactoryTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ResponseFactoryTest.php" tests="4" assertions="3" failures="0" errors="0" time="0.034003">
+      <testcase name="testCreate" class="App\Tests\Functional\Compario\ResponseFactoryTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ResponseFactoryTest.php" line="18" assertions="1" time="0.009162"/>
+      <testcase name="testCreateProductPage" class="App\Tests\Functional\Compario\ResponseFactoryTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ResponseFactoryTest.php" line="25" assertions="1" time="0.008387"/>
+      <testcase name="testCreatePrivateSalePage" class="App\Tests\Functional\Compario\ResponseFactoryTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ResponseFactoryTest.php" line="32" assertions="1" time="0.008402"/>
+      <testcase name="testGetCodeAttributeNames" class="App\Tests\Functional\Compario\ResponseFactoryTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Compario/ResponseFactoryTest.php" line="39" assertions="0" time="0.008052"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Controller\Wishlist\WishlistTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Controller/Wishlist/WishlistTest.php" tests="3" assertions="3" failures="0" errors="0" time="34.575291">
+      <testcase name="testInsertAlerteTailleAction" class="App\Tests\Functional\Controller\Wishlist\WishlistTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Controller/Wishlist/WishlistTest.php" line="18" assertions="2" time="17.644765"/>
+      <testcase name="testAddAction" class="App\Tests\Functional\Controller\Wishlist\WishlistTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Controller/Wishlist/WishlistTest.php" line="51" assertions="1" time="16.923815"/>
+      <testcase name="testGetWishlist" class="App\Tests\Functional\Controller\Wishlist\WishlistTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/Controller/Wishlist/WishlistTest.php" line="80" assertions="0" time="0.006711"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\ShippingTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/ShippingTest.php" tests="3" assertions="1" failures="0" errors="0" time="0.021633">
+      <testcase name="testAttributes" class="App\Tests\Functional\ShippingTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/ShippingTest.php" line="23" assertions="0" time="0.006510"/>
+      <testcase name="testSetShippingCountry" class="App\Tests\Functional\ShippingTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/ShippingTest.php" line="38" assertions="0" time="0.006590"/>
+      <testcase name="testGetShippingCountry" class="App\Tests\Functional\ShippingTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/ShippingTest.php" line="51" assertions="1" time="0.008533"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\StocksTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/StocksTest.php" tests="5" assertions="2" failures="0" errors="0" time="5.921826">
+      <testcase name="testAttributes" class="App\Tests\Functional\StocksTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/StocksTest.php" line="26" assertions="1" time="0.008356"/>
+      <testcase name="testHasStock" class="App\Tests\Functional\StocksTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/StocksTest.php" line="38" assertions="1" time="0.341652"/>
+      <testcase name="testGetForSku" class="App\Tests\Functional\StocksTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/StocksTest.php" line="52" assertions="0" time="0.339764"/>
+      <testcase name="testGetForSkus" class="App\Tests\Functional\StocksTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/StocksTest.php" line="61" assertions="0" time="2.804372"/>
+      <testcase name="testGet" class="App\Tests\Functional\StocksTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Functional/StocksTest.php" line="79" assertions="0" time="2.427682"/>
+    </testsuite>
+    <testsuite name="App\Tests\Unitary\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Account/PersonalInfoTest.php" tests="3" assertions="2" failures="0" errors="0" time="0.352121">
+      <testcase name="testDashboardAction" class="App\Tests\Unitary\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Account/PersonalInfoTest.php" line="53" assertions="2" time="0.309957"/>
+      <testcase name="testPutInfosAction" class="App\Tests\Unitary\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Account/PersonalInfoTest.php" line="63" assertions="0" time="0.020786"/>
+      <testcase name="testPutEmailAction" class="App\Tests\Unitary\Api\Account\PersonalInfoTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Account/PersonalInfoTest.php" line="68" assertions="0" time="0.021378"/>
+    </testsuite>
+    <testsuite name="App\Tests\Unitary\Api\Contact\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Contact/ContactTest.php" tests="1" assertions="5" failures="0" errors="0" time="0.188114">
+      <testcase name="testServiceClientAction" class="App\Tests\Unitary\Api\Contact\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Contact/ContactTest.php" line="81" assertions="5" time="0.188114"/>
+    </testsuite>
+    <testsuite name="App\Tests\Unitary\Api\Countries\CountriesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Countries/CountriesTest.php" tests="1" assertions="4" failures="0" errors="0" time="0.180833">
+      <testcase name="testGetCountriesAction" class="App\Tests\Unitary\Api\Countries\CountriesTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Countries/CountriesTest.php" line="90" assertions="4" time="0.180833"/>
+    </testsuite>
+    <testsuite name="App\Tests\Unitary\Api\Product\HomepageTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Product/HomepageTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.317422">
+      <testcase name="testIndexAction" class="App\Tests\Unitary\Api\Product\HomepageTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Product/HomepageTest.php" line="15" assertions="1" time="0.317422"/>
+    </testsuite>
+    <testsuite name="App\Tests\Unitary\Api\Security\ApiKeyAuthenticatorTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/ApiKeyAuthenticatorTest.php" tests="4" assertions="7" failures="0" errors="0" time="0.447970">
+      <testcase name="testCreateToken" class="App\Tests\Unitary\Api\Security\ApiKeyAuthenticatorTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/ApiKeyAuthenticatorTest.php" line="46" assertions="2" time="0.281527"/>
+      <testcase name="testAuthenticateToken" class="App\Tests\Unitary\Api\Security\ApiKeyAuthenticatorTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/ApiKeyAuthenticatorTest.php" line="117" assertions="3" time="0.070162"/>
+      <testcase name="testSupportsToken" class="App\Tests\Unitary\Api\Security\ApiKeyAuthenticatorTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/ApiKeyAuthenticatorTest.php" line="148" assertions="1" time="0.056097"/>
+      <testcase name="testOnAuthenticationFailure" class="App\Tests\Unitary\Api\Security\ApiKeyAuthenticatorTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/ApiKeyAuthenticatorTest.php" line="163" assertions="1" time="0.040184"/>
+    </testsuite>
+    <testsuite name="App\Tests\Unitary\Api\Security\LoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/LoginTest.php" tests="1" assertions="3" failures="0" errors="0" time="0.153523">
+      <testcase name="testLoginAction" class="App\Tests\Unitary\Api\Security\LoginTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/LoginTest.php" line="81" assertions="3" time="0.153523"/>
+    </testsuite>
+    <testsuite name="App\Tests\Functional\Api\Security\PasswordLostTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/PasswordLostTest.php" tests="2" assertions="4" failures="0" errors="0" time="0.149434">
+      <testcase name="testResetRedirectAction" class="App\Tests\Functional\Api\Security\PasswordLostTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/PasswordLostTest.php" line="26" assertions="0" time="0.012104"/>
+      <testcase name="testAskNewAction" class="App\Tests\Functional\Api\Security\PasswordLostTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Api/Security/PasswordLostTest.php" line="31" assertions="4" time="0.137330"/>
+    </testsuite>
+    <testsuite name="App\Tests\Cap\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cap/ClientTest.php" tests="5" assertions="6" failures="0" errors="0" time="1.581241">
+      <testcase name="testGetCodePostals" class="App\Tests\Cap\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cap/ClientTest.php" line="89" assertions="1" time="1.439277"/>
+      <testcase name="testGetRues" class="App\Tests\Cap\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cap/ClientTest.php" line="96" assertions="1" time="0.035954"/>
+      <testcase name="testGetNumeros" class="App\Tests\Cap\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cap/ClientTest.php" line="103" assertions="1" time="0.039008"/>
+      <testcase name="testGetComplements" class="App\Tests\Cap\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cap/ClientTest.php" line="110" assertions="2" time="0.033452"/>
+      <testcase name="testGetMails" class="App\Tests\Cap\ClientTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cap/ClientTest.php" line="118" assertions="1" time="0.033550"/>
+    </testsuite>
+    <testsuite name="App\Tests\Cart\SplitterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cart/SplitterTest.php" tests="5" assertions="5" failures="0" errors="0" time="1.207009">
+      <testcase name="testCanBeSplitted" class="App\Tests\Cart\SplitterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cart/SplitterTest.php" line="126" assertions="1" time="0.732086"/>
+      <testcase name="testIsSplitted" class="App\Tests\Cart\SplitterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cart/SplitterTest.php" line="133" assertions="1" time="0.065147"/>
+      <testcase name="testCheckSplitAvailability" class="App\Tests\Cart\SplitterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cart/SplitterTest.php" line="140" assertions="1" time="0.096023"/>
+      <testcase name="testSplit" class="App\Tests\Cart\SplitterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cart/SplitterTest.php" line="147" assertions="1" time="0.154283"/>
+      <testcase name="testIsProviderItemOnly" class="App\Tests\Cart\SplitterTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Cart/SplitterTest.php" line="154" assertions="1" time="0.159470"/>
+    </testsuite>
+    <testsuite name="App\Tests\Twig\LabelForSkuTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Twig/labelForSkuTest.php" tests="3" assertions="4" failures="0" errors="0" time="0.101634">
+      <testcase name="testGetName" class="App\Tests\Twig\LabelForSkuTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Twig/labelForSkuTest.php" line="39" assertions="1" time="0.058926"/>
+      <testcase name="testGetLabel" class="App\Tests\Twig\LabelForSkuTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Twig/labelForSkuTest.php" line="46" assertions="1" time="0.021472"/>
+      <testcase name="testGetFunctions" class="App\Tests\Twig\LabelForSkuTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Twig/labelForSkuTest.php" line="53" assertions="2" time="0.021236"/>
+    </testsuite>
+    <testsuite name="App\Tests\Uploader\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ContactTest.php" tests="5" assertions="7" failures="0" errors="0" time="0.053582">
+      <testcase name="testGetUploadDirectory" class="App\Tests\Uploader\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ContactTest.php" line="40" assertions="2" time="0.011530"/>
+      <testcase name="testGetWebDirectory" class="App\Tests\Uploader\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ContactTest.php" line="61" assertions="2" time="0.012342"/>
+      <testcase name="testGetUploadRootDirectory" class="App\Tests\Uploader\ContactTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ContactTest.php" line="76" assertions="1" time="0.011466"/>
+      <testsuite name="App\Tests\Uploader\ContactTest::testGetEndName" tests="2" assertions="2" failures="0" errors="0" time="0.018244">
+        <testcase name="testGetEndName with data set #0" assertions="1" time="0.009070"/>
+        <testcase name="testGetEndName with data set #1" assertions="1" time="0.009174"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="App\Tests\Uploader\ReturnItemsUploaderTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ReturnItemsUploaderTest.php" tests="4" assertions="6" failures="0" errors="0" time="0.087417">
+      <testcase name="testGetUploadDirectory" class="App\Tests\Uploader\ReturnItemsUploaderTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ReturnItemsUploaderTest.php" line="38" assertions="2" time="0.017465"/>
+      <testcase name="testGetWebDirectory" class="App\Tests\Uploader\ReturnItemsUploaderTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ReturnItemsUploaderTest.php" line="58" assertions="2" time="0.011571"/>
+      <testcase name="testGetUploadRootDirectory" class="App\Tests\Uploader\ReturnItemsUploaderTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ReturnItemsUploaderTest.php" line="78" assertions="1" time="0.011199"/>
+      <testcase name="testUpload" class="App\Tests\Uploader\ReturnItemsUploaderTest" file="/home/vincent/www/brandalley.v6/src/App/Tests/Unitary/Uploader/ReturnItemsUploaderTest.php" line="93" assertions="1" time="0.047182"/>
+    </testsuite>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,6 @@
+
+booking
+===========
+
+A Symfony project
+=======
