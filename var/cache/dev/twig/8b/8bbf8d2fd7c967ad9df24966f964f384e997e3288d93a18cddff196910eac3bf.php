@@ -1,6 +1,6 @@
 <?php
 
-/* App:api:motd.html.twig */
+/* App::api/motd.html.twig */
 class __TwigTemplate_202080729c566fcea7f0c73f6b0c034be2fee4f360cd7c66b73115cb6ec6bb43 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_202080729c566fcea7f0c73f6b0c034be2fee4f360cd7c66b73115cb6ec
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6fabdfd5b25aaf0d585d23b5d22238885774e4283173a2447f832c511a5c8ad3 = $this->env->getExtension("native_profiler");
-        $__internal_6fabdfd5b25aaf0d585d23b5d22238885774e4283173a2447f832c511a5c8ad3->enter($__internal_6fabdfd5b25aaf0d585d23b5d22238885774e4283173a2447f832c511a5c8ad3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "App:api:motd.html.twig"));
+        $__internal_63b2d135e438561bf6e73dd43b72c0a2d9daafe979c2ce1ba23abf012ebfa12d = $this->env->getExtension("native_profiler");
+        $__internal_63b2d135e438561bf6e73dd43b72c0a2d9daafe979c2ce1ba23abf012ebfa12d->enter($__internal_63b2d135e438561bf6e73dd43b72c0a2d9daafe979c2ce1ba23abf012ebfa12d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "App::api/motd.html.twig"));
 
         // line 1
         echo "<div class=\"motd\">
@@ -56,13 +56,13 @@ class __TwigTemplate_202080729c566fcea7f0c73f6b0c034be2fee4f360cd7c66b73115cb6ec
 </div>
 ";
         
-        $__internal_6fabdfd5b25aaf0d585d23b5d22238885774e4283173a2447f832c511a5c8ad3->leave($__internal_6fabdfd5b25aaf0d585d23b5d22238885774e4283173a2447f832c511a5c8ad3_prof);
+        $__internal_63b2d135e438561bf6e73dd43b72c0a2d9daafe979c2ce1ba23abf012ebfa12d->leave($__internal_63b2d135e438561bf6e73dd43b72c0a2d9daafe979c2ce1ba23abf012ebfa12d_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "App:api:motd.html.twig";
+        return "App::api/motd.html.twig";
     }
 
     public function getDebugInfo()

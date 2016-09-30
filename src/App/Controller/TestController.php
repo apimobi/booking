@@ -16,7 +16,7 @@ class TestController extends FOSRestController
       */
     public function indexAction(Request $request)
     {
-        return $this->redirectToRoute('app_front_product_post');
+        return $this->redirectToRoute('app_front_search_index');
         // replace this example code with whatever you need
 
         // return $this->render('default/index.html.twig', [

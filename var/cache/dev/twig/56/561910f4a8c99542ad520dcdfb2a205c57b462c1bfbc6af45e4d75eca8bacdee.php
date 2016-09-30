@@ -1,6 +1,6 @@
 <?php
 
-/* TwigBundle:Exception:exception.js.twig */
+/* @Twig/Exception/exception.js.twig */
 class __TwigTemplate_f8409786ee964f95b9c22cab962da6789f8e481102d0ec258b4b366973772715 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,25 +15,25 @@ class __TwigTemplate_f8409786ee964f95b9c22cab962da6789f8e481102d0ec258b4b3669737
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_920c4c5bf1d2c62e4dd9677fdd122228f9c447aaa09de31cdec8158b99deadc8 = $this->env->getExtension("native_profiler");
-        $__internal_920c4c5bf1d2c62e4dd9677fdd122228f9c447aaa09de31cdec8158b99deadc8->enter($__internal_920c4c5bf1d2c62e4dd9677fdd122228f9c447aaa09de31cdec8158b99deadc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:exception.js.twig"));
+        $__internal_f734294430094e3b97c93db0195be4ea602c7b70bd9612fa50d848b49a50c7f0 = $this->env->getExtension("native_profiler");
+        $__internal_f734294430094e3b97c93db0195be4ea602c7b70bd9612fa50d848b49a50c7f0->enter($__internal_f734294430094e3b97c93db0195be4ea602c7b70bd9612fa50d848b49a50c7f0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@Twig/Exception/exception.js.twig"));
 
         // line 1
         echo "/*
 ";
         // line 2
-        $this->loadTemplate("@Twig/Exception/exception.txt.twig", "TwigBundle:Exception:exception.js.twig", 2)->display(array_merge($context, array("exception" => (isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")))));
+        $this->loadTemplate("@Twig/Exception/exception.txt.twig", "@Twig/Exception/exception.js.twig", 2)->display(array_merge($context, array("exception" => (isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")))));
         // line 3
         echo "*/
 ";
         
-        $__internal_920c4c5bf1d2c62e4dd9677fdd122228f9c447aaa09de31cdec8158b99deadc8->leave($__internal_920c4c5bf1d2c62e4dd9677fdd122228f9c447aaa09de31cdec8158b99deadc8_prof);
+        $__internal_f734294430094e3b97c93db0195be4ea602c7b70bd9612fa50d848b49a50c7f0->leave($__internal_f734294430094e3b97c93db0195be4ea602c7b70bd9612fa50d848b49a50c7f0_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "TwigBundle:Exception:exception.js.twig";
+        return "@Twig/Exception/exception.js.twig";
     }
 
     public function isTraitable()

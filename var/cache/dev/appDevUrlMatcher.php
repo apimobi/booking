@@ -260,143 +260,32 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
         not_default:
 
-        if (0 === strpos($pathinfo, '/product')) {
-            // app_front_product_index
-            if (rtrim($pathinfo, '/') === '/product') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_app_front_product_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'app_front_product_index');
-                }
-
-                return array (  '_controller' => 'App\\Controller\\front\\ProductController::indexAction',  '_route' => 'app_front_product_index',);
+        // app_front_search_index
+        if (rtrim($pathinfo, '/') === '/search') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_app_front_search_index;
             }
-            not_app_front_product_index:
 
-            // app_front_product_post
-            if ($pathinfo === '/product/post') {
-                if ($this->context->getMethod() != 'POST') {
-                    $allow[] = 'POST';
-                    goto not_app_front_product_post;
-                }
-
-                return array (  '_controller' => 'App\\Controller\\front\\ProductController::postAction',  '_route' => 'app_front_product_post',);
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'app_front_search_index');
             }
-            not_app_front_product_post:
 
+            return array (  '_controller' => 'App\\Controller\\front\\SearchController::indexAction',  '_route' => 'app_front_search_index',);
         }
-
-        // app_front_user_post
-        if ($pathinfo === '/user/post') {
-            if ($this->context->getMethod() != 'POST') {
-                $allow[] = 'POST';
-                goto not_app_front_user_post;
-            }
-
-            return array (  '_controller' => 'App\\Controller\\front\\UserController::postAction',  '_route' => 'app_front_user_post',);
-        }
-        not_app_front_user_post:
+        not_app_front_search_index:
 
         if (0 === strpos($pathinfo, '/api')) {
-            if (0 === strpos($pathinfo, '/api/v1')) {
-                if (0 === strpos($pathinfo, '/api/v1/product')) {
-                    // app_api_product_getproduct
-                    if (0 === strpos($pathinfo, '/api/v1/product/product') && preg_match('#^/api/v1/product/product/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_app_api_product_getproduct;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_api_product_getproduct')), array (  '_controller' => 'App\\Controller\\Api\\ProductController::getProductAction',));
-                    }
-                    not_app_api_product_getproduct:
-
-                    // app_api_product_postproduct
-                    if ($pathinfo === '/api/v1/product/create') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_app_api_product_postproduct;
-                        }
-
-                        return array (  '_controller' => 'App\\Controller\\Api\\ProductController::postProductAction',  '_route' => 'app_api_product_postproduct',);
-                    }
-                    not_app_api_product_postproduct:
-
-                    // app_api_product_getidproduct
-                    if ($pathinfo === '/api/v1/product/getIdproduct') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_app_api_product_getidproduct;
-                        }
-
-                        return array (  '_controller' => 'App\\Controller\\Api\\ProductController::getIdProductAction',  '_route' => 'app_api_product_getidproduct',);
-                    }
-                    not_app_api_product_getidproduct:
-
-                    // app_api_product_getproducts
-                    if ($pathinfo === '/api/v1/product/all') {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_app_api_product_getproducts;
-                        }
-
-                        return array (  '_controller' => 'App\\Controller\\Api\\ProductController::getProductsAction',  '_route' => 'app_api_product_getproducts',);
-                    }
-                    not_app_api_product_getproducts:
-
+            // app_api_search_index
+            if ($pathinfo === '/api/v1/search/create') {
+                if ($this->context->getMethod() != 'POST') {
+                    $allow[] = 'POST';
+                    goto not_app_api_search_index;
                 }
 
-                if (0 === strpos($pathinfo, '/api/v1/user')) {
-                    // app_api_user_getuser
-                    if (preg_match('#^/api/v1/user/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_app_api_user_getuser;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_api_user_getuser')), array (  '_controller' => 'App\\Controller\\Api\\UserController::getUserAction',));
-                    }
-                    not_app_api_user_getuser:
-
-                    // app_api_user_postuser
-                    if ($pathinfo === '/api/v1/user/create') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_app_api_user_postuser;
-                        }
-
-                        return array (  '_controller' => 'App\\Controller\\Api\\UserController::postUserAction',  '_route' => 'app_api_user_postuser',);
-                    }
-                    not_app_api_user_postuser:
-
-                    // app_api_user_postproduct
-                    if ($pathinfo === '/api/v1/user/postProductUser') {
-                        if ($this->context->getMethod() != 'POST') {
-                            $allow[] = 'POST';
-                            goto not_app_api_user_postproduct;
-                        }
-
-                        return array (  '_controller' => 'App\\Controller\\Api\\UserController::postProductAction',  '_route' => 'app_api_user_postproduct',);
-                    }
-                    not_app_api_user_postproduct:
-
-                    // app_api_user_getproduct
-                    if (0 === strpos($pathinfo, '/api/v1/user/getProductUser') && preg_match('#^/api/v1/user/getProductUser/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-                        if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                            $allow = array_merge($allow, array('GET', 'HEAD'));
-                            goto not_app_api_user_getproduct;
-                        }
-
-                        return $this->mergeDefaults(array_replace($matches, array('_route' => 'app_api_user_getproduct')), array (  '_controller' => 'App\\Controller\\Api\\UserController::getProductAction',));
-                    }
-                    not_app_api_user_getproduct:
-
-                }
-
+                return array (  '_controller' => 'App\\Controller\\Api\\SearchController::indexAction',  '_route' => 'app_api_search_index',);
             }
+            not_app_api_search_index:
 
             // nelmio_api_doc_index
             if (0 === strpos($pathinfo, '/api/doc') && preg_match('#^/api/doc(?:/(?P<view>[^/]++))?$#s', $pathinfo, $matches)) {
