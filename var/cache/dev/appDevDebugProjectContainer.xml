@@ -686,9 +686,9 @@
               <argument type="service">
                 <service class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
                   <tag name="cache.pool"/>
-                  <argument>q5nyzIvWo6</argument>
+                  <argument>wAefyWucba</argument>
                   <argument>0</argument>
-                  <argument>OZzcZzgUUZazujMb+F8OEQ</argument>
+                  <argument>kdFG1AGD5E+C8fqHdGPong</argument>
                   <argument>/home/vincent/www/booking/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -699,9 +699,9 @@
               <argument type="service">
                 <service class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
                   <tag name="cache.pool"/>
-                  <argument>k2anwetWW+</argument>
+                  <argument>p0z+JiBMYf</argument>
                   <argument>0</argument>
-                  <argument>OZzcZzgUUZazujMb+F8OEQ</argument>
+                  <argument>kdFG1AGD5E+C8fqHdGPong</argument>
                   <argument>/home/vincent/www/booking/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1022,7 +1022,7 @@
     </service>
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <tag name="cache.pool"/>
-      <argument>4zc7RiaV1A</argument>
+      <argument>Ev1f+iufW1</argument>
       <argument>0</argument>
       <argument>/home/vincent/www/booking/var/cache/dev/pools</argument>
       <call method="setLogger">
@@ -1031,9 +1031,9 @@
     </service>
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface">
       <tag name="cache.pool"/>
-      <argument>cknaWJHIxv</argument>
+      <argument>QIqAMoTm9b</argument>
       <argument>0</argument>
-      <argument>OZzcZzgUUZazujMb+F8OEQ</argument>
+      <argument>kdFG1AGD5E+C8fqHdGPong</argument>
       <argument>/home/vincent/www/booking/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -3785,19 +3785,9 @@
     <service id="assetic.request_listener" class="Symfony\Bundle\AsseticBundle\EventListener\RequestListener">
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
     </service>
-    <service id="app.service.product" class="App\Services\ProductService">
+    <service id="app.service.search" class="App\Services\SearchService">
       <argument type="service" id="form.factory"/>
       <argument type="service" id="doctrine"/>
-    </service>
-    <service id="app.service.user" class="App\Services\UserService">
-      <argument type="service" id="form.factory"/>
-      <argument type="service" id="doctrine"/>
-      <argument>4d35ceb5f6434c3a54622acafcbfeb769bc04e15</argument>
-    </service>
-    <service id="app.service.productuser" class="App\Services\ProductUserService">
-      <argument type="service" id="form.factory"/>
-      <argument type="service" id="doctrine"/>
-      <argument type="service" id="security.token_storage"/>
     </service>
     <service id="app.token_authenticator" class="App\Security\TokenAuthenticator">
       <argument type="service" id="doctrine.orm.default_entity_manager"/>

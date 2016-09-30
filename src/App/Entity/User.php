@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="User")
+ * @ORM\Table(name="user")
  */
 class User implements UserInterface
 {
@@ -21,60 +21,12 @@ class User implements UserInterface
      */
     private $iduser;
 
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $username;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $firstname;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $lastname;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $email;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $password;
-
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $datecreated;
-
-    /**
-     * @ORM\Column(type="datetime")
-     */
-    private $datemodified;
 
     /**
      * @ORM\Column(type="string", unique=true)
      */
     private $apiKey;
 
-    /**
-     * ORM\Column(type="integer")
-     *  @ORM\ManyToMany(targetEntity="ProductUser")
-     *  @ORM\JoinTable(name="ProductUser",
-     *      joinColumns={ @ORM\JoinColumn(name="idUser", referencedColumnName="idUser")},
-     *      inverseJoinColumns={ @ORM\JoinColumn(name="idUser", referencedColumnName="idUser", unique=true)}
-     *      )
-     */
-    private $products;
-
-    public function __construct()
-    {
-        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Get idUser
@@ -84,12 +36,6 @@ class User implements UserInterface
     public function getIduser()
     {
         return $this->iduser;
-    }
-
-
-    public function getUsername()
-    {
-        return $this->username;
     }
 
     public function getRoles()
@@ -106,90 +52,14 @@ class User implements UserInterface
     }
 
     /**
-     * Set firstname
+     * Returns the username used to authenticate the user.
      *
-     * @param string $firstname
-     *
-     * @return User
+     * @return string The username
      */
-    public function setFirstname($firstname)
-    {
-        $this->firstname = $firstname;
-
-        return $this;
+    public function getUsername(){
+        return 'username';
     }
 
-    /**
-     * Get firstname
-     *
-     * @return string
-     */
-    public function getFirstname()
-    {
-        return $this->firstname;
-    }
-
-    /**
-     * Set lastname
-     *
-     * @param string $lastname
-     *
-     * @return User
-     */
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    /**
-     * Get lastname
-     *
-     * @return string
-     */
-    public function getLastname()
-    {
-        return $this->lastname;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return User
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set password
-     *
-     * @param string $password
-     *
-     * @return User
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
 
     /**
      * Get password
@@ -198,67 +68,9 @@ class User implements UserInterface
      */
     public function getPassword()
     {
-        return $this->password;
+        return 'nopassword';
     }
 
-    /**
-     * Set datecreated
-     *
-     * @param \DateTime $datecreated
-     *
-     * @return User
-     */
-    public function setDatecreated($datecreated)
-    {
-        $this->datecreated = $datecreated;
-
-        return $this;
-    }
-
-    /**
-     * Get datecreated
-     *
-     * @return \DateTime
-     */
-    public function getDatecreated()
-    {
-        return $this->datecreated;
-    }
-
-    /**
-     * Set datemodified
-     *
-     * @param \DateTime $datemodified
-     *
-     * @return User
-     */
-    public function setDatemodified($datemodified)
-    {
-        $this->datemodified = $datemodified;
-
-        return $this;
-    }
-
-    /**
-     * Get datemodified
-     *
-     * @return \DateTime
-     */
-    public function getDatemodified()
-    {
-        return $this->datemodified;
-    }
-
-    /**
-     * Set apiKey
-     *
-     * @param String $apiKey
-     *
-     */
-    public function setApiKey($apiKey)
-    {
-        $this->apiKey = $apiKey;
-    }
 
     /**
      * Get apiKey
@@ -270,15 +82,6 @@ class User implements UserInterface
         return $this->apiKey;
     }
 
-    /**
-     * Get products
-     *
-     * @return ArrayCollection
-     */
-    public function getProducts()
-    {
-        return $this->products;
-    }
 
 
 }

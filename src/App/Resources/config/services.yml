@@ -4,25 +4,11 @@ services:
     #     calls:
     #         - [setContainer, ['@service_container']]
 
-    app.service.product:
-        class: App\Services\ProductService
+    app.service.search:
+        class: App\Services\SearchService
         arguments:
           - '@form.factory'
           - '@doctrine'
-
-    app.service.user:
-        class: App\Services\UserService
-        arguments:
-          - '@form.factory'
-          - '@doctrine'
-          - '%secret%'
-
-    app.service.productuser:
-        class: App\Services\ProductUserService
-        arguments :
-          - '@form.factory'
-          - '@doctrine'
-          - '@security.token_storage'
 
     app.token_authenticator:
         class: App\Security\TokenAuthenticator

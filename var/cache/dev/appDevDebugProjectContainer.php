@@ -32,9 +32,7 @@ class appDevDebugProjectContainer extends Container
         $this->services = array();
         $this->methodMap = array(
             'annotation_reader' => 'getAnnotationReaderService',
-            'app.service.product' => 'getApp_Service_ProductService',
-            'app.service.productuser' => 'getApp_Service_ProductuserService',
-            'app.service.user' => 'getApp_Service_UserService',
+            'app.service.search' => 'getApp_Service_SearchService',
             'app.token_authenticator' => 'getApp_TokenAuthenticatorService',
             'assetic.asset_factory' => 'getAssetic_AssetFactoryService',
             'assetic.asset_manager' => 'getAssetic_AssetManagerService',
@@ -361,42 +359,16 @@ class appDevDebugProjectContainer extends Container
     }
 
     /**
-     * Gets the 'app.service.product' service.
+     * Gets the 'app.service.search' service.
      *
      * This service is shared.
      * This method always returns the same instance of the service.
      *
-     * @return \App\Services\ProductService A App\Services\ProductService instance
+     * @return \App\Services\SearchService A App\Services\SearchService instance
      */
-    protected function getApp_Service_ProductService()
+    protected function getApp_Service_SearchService()
     {
-        return $this->services['app.service.product'] = new \App\Services\ProductService($this->get('form.factory'), $this->get('doctrine'));
-    }
-
-    /**
-     * Gets the 'app.service.productuser' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * @return \App\Services\ProductUserService A App\Services\ProductUserService instance
-     */
-    protected function getApp_Service_ProductuserService()
-    {
-        return $this->services['app.service.productuser'] = new \App\Services\ProductUserService($this->get('form.factory'), $this->get('doctrine'), $this->get('security.token_storage'));
-    }
-
-    /**
-     * Gets the 'app.service.user' service.
-     *
-     * This service is shared.
-     * This method always returns the same instance of the service.
-     *
-     * @return \App\Services\UserService A App\Services\UserService instance
-     */
-    protected function getApp_Service_UserService()
-    {
-        return $this->services['app.service.user'] = new \App\Services\UserService($this->get('form.factory'), $this->get('doctrine'), '4d35ceb5f6434c3a54622acafcbfeb769bc04e15');
+        return $this->services['app.service.search'] = new \App\Services\SearchService($this->get('form.factory'), $this->get('doctrine'));
     }
 
     /**
@@ -563,7 +535,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_AppService()
     {
-        $this->services['cache.app'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('4zc7RiaV1A', 0, (__DIR__.'/pools'));
+        $this->services['cache.app'] = $instance = new \Symfony\Component\Cache\Adapter\FilesystemAdapter('Ev1f+iufW1', 0, (__DIR__.'/pools'));
 
         if ($this->has('monolog.logger.cache')) {
             $instance->setLogger($this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE));
@@ -595,7 +567,7 @@ class appDevDebugProjectContainer extends Container
      */
     protected function getCache_SystemService()
     {
-        return $this->services['cache.system'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('cknaWJHIxv', 0, 'OZzcZzgUUZazujMb+F8OEQ', (__DIR__.'/pools'), $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE));
+        return $this->services['cache.system'] = \Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('QIqAMoTm9b', 0, 'kdFG1AGD5E+C8fqHdGPong', (__DIR__.'/pools'), $this->get('monolog.logger.cache', ContainerInterface::NULL_ON_INVALID_REFERENCE));
     }
 
     /**
@@ -613,8 +585,8 @@ class appDevDebugProjectContainer extends Container
         $b = new \Symfony\Component\HttpKernel\CacheClearer\Psr6CacheClearer();
         $b->addPool($this->get('cache.app'));
         $b->addPool($this->get('cache.system'));
-        $b->addPool(\Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('q5nyzIvWo6', 0, 'OZzcZzgUUZazujMb+F8OEQ', (__DIR__.'/pools'), $a));
-        $b->addPool(\Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('k2anwetWW+', 0, 'OZzcZzgUUZazujMb+F8OEQ', (__DIR__.'/pools'), $a));
+        $b->addPool(\Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('wAefyWucba', 0, 'kdFG1AGD5E+C8fqHdGPong', (__DIR__.'/pools'), $a));
+        $b->addPool(\Symfony\Component\Cache\Adapter\AbstractAdapter::createSystemCache('p0z+JiBMYf', 0, 'kdFG1AGD5E+C8fqHdGPong', (__DIR__.'/pools'), $a));
 
         return $this->services['cache_clearer'] = new \Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer(array(0 => $b));
     }
