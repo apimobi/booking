@@ -1,0 +1,20 @@
+
+# bin
+
+var/cache/
+var/logs/
+var/sessions/
+
+app/config/parameters.yml
+app/config/config_dev.yml
+app/config/*.local.yml
+
+src/.htaccess
+
+vendor/
+
+web/.htaccess
+
+vendor
+
+# specific
