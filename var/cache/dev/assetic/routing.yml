@@ -2,4 +2,4 @@ _assetic:
     resource: .
     type: assetic
 _app:
-    resource: /home/vincent/www/booking/app/config/routing.yml
+    resource: /Applications/MAMP/htdocs/booking/app/config/routing.yml
