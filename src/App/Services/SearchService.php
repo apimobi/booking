@@ -3,8 +3,7 @@
 namespace App\Services;
 
 use Symfony\Component\HttpFoundation\Request;
-use App\Entity\Product;
-use App\Form\Type\ProductType;
+use App\Entity\Reservation;
 use Symfony\Component\Form\FormFactoryInterface;
 use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 
@@ -12,18 +11,19 @@ use Doctrine\Bundle\DoctrineBundle\Registry as Doctrine;
 class SearchService
 {
 
-  protected $forms;
   protected $doctrine;
+  protected $reservationService;
+  protected $priceService;
 
   /**
    *
-   * @param FormFactoryInterface $forms
    * @param Doctrine             $doctrine
    */
-  public function __construct(FormFactoryInterface $forms, Doctrine $doctrine)
+  public function __construct(Doctrine $doctrine, ReservationService $reservationService, PricesService $priceService)
   {
-      $this->forms = $forms;
       $this->doctrine = $doctrine;
+      $this->reservationService = $reservationService;
+      $this->priceService = $priceService;
   }
 
 
@@ -31,18 +31,21 @@ class SearchService
    * @param  Request $request
    * @return Array
    */
-  public function getResults()
+  public function getResults($dateIn, $dateOut)
   {
-      $em = $this->doctrine->getManager();
 
-      $results = null;
+      $dateCheckin = new \DateTime($dateIn);
+      $dateCheckout = new \DateTime($dateOut);
 
-      if($results)
-      {
-         return $results;
-      }else{
-         return 'Not found';
-      }
+      $availableHousing = $this->reservationService->findAvailablesHousing([1,2,3,4,5,6], $dateCheckin, $dateCheckout);
+
+      dump($availableHousing);
+
+      $results = $this->priceService->getPrices($availableHousing, $dateCheckin, $dateCheckout);
+
+
+
+      return $results;
 
   }
 

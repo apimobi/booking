@@ -33,14 +33,14 @@ class SearchController extends FOSRestController
       *      {
       *          "name"="search[date_in]",
       *          "dataType"="date",
-      *          "description"="date in",
-      *          "required"=true
+      *          "description"="2016-10-08",
+      *          "required"=false
       *      },
       *      {
       *          "name"="search[date_out]",
       *          "dataType"="date",
-      *          "description"="date out",
-      *          "required"=true
+      *          "description"="2016-10_24",
+      *          "required"=false
       *      }
       * }
       * )
@@ -55,7 +55,8 @@ class SearchController extends FOSRestController
       */
     public function indexAction(Request $request)
     {
-      return $this->container->get('app.service.search')->getResults($request);
+        return $this->container->get('app.service.search')->getResults($request->request->get('search')['date_in']
+                                                                     ,$request->request->get('search')['date_out']);
     }
 
 }

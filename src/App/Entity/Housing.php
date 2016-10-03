@@ -7,13 +7,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Housing
  *
- * @ORM\Table(name="housing", indexes={@ORM\Index(name="housing_prices", columns={"prices_id"}), @ORM\Index(name="room_room_type", columns={"housing_type_id"})})
- * @ORM\Entity
+ * @ORM\Table(name="housing", indexes={@ORM\Index(name="room_room_type", columns={"housing_type_id"})})
+ * @ORM\Entity(repositoryClass="App\Entity\Repository\HousingRepository")
  */
 class Housing
 {
     /**
-     * @var integer
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -22,28 +21,16 @@ class Housing
     private $id;
 
     /**
-     * @var string
      *
      * @ORM\Column(name="name", type="string", length=40, nullable=false)
      */
     private $name;
 
     /**
-     * @var string
      *
-     * @ORM\Column(name="status", type="string", length=10, nullable=false)
+     * @ORM\Column(name="default_price", type="float")
      */
-    private $status;
-
-    /**
-     * @var \App\Entity\Prices
-     *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Prices")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="prices_id", referencedColumnName="id")
-     * })
-     */
-    private $prices;
+    private $defaultPrice;
 
     /**
      * @var \App\Entity\HousingType
@@ -55,6 +42,62 @@ class Housing
      */
     private $housingType;
 
+    /**
+     *
+     */
+    private $calculatedPrice;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Get defaultPrice
+     *
+     * @return float
+     */
+    public function getDefaultPrice()
+    {
+        return $this->defaultPrice;
+    }
+
+    /**
+     * Set calculatedPrice
+     *
+     * @param float $price
+     */
+    public function setCalculatedPrice($price)
+    {
+        $this->calculatedPrice = $price;
+    }
+
+    /**
+     * Get calculatedPrice
+     *
+     * @return float
+     */
+    public function getCalculatedPrice()
+    {
+        return $this->calculatedPrice;
+    }
 
 }
 

@@ -7,13 +7,12 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Reservation
  *
- * @ORM\Table(name="reservation", indexes={@ORM\Index(name="reservation_guest", columns={"guest_id"}), @ORM\Index(name="reservation_housing", columns={"housing_id"})})
- * @ORM\Entity
+ * @ORM\Table(name="reservation", indexes={@ORM\Index(name="reservation_housing", columns={"housing_id"})})
+ * @ORM\Entity(repositoryClass="App\Entity\Repository\ReservationRepository")
  */
 class Reservation
 {
     /**
-     * @var integer
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -22,31 +21,30 @@ class Reservation
     private $id;
 
     /**
-     * @var \DateTime
      *
      * @ORM\Column(name="date_in", type="date", nullable=false)
      */
     private $dateIn;
 
     /**
-     * @var \DateTime
      *
      * @ORM\Column(name="date_out", type="date", nullable=false)
      */
     private $dateOut;
 
     /**
-     * @var \App\Entity\Guest
      *
-     * @ORM\ManyToOne(targetEntity="App\Entity\Guest")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="guest_id", referencedColumnName="id")
-     * })
+     * @ORM\Column(name="owner_reservation", type="boolean", nullable=false)
      */
-    private $guest;
+    private $ownerReservation;
 
     /**
-     * @var \App\Entity\Housing
+     *
+     * @ORM\Column(name="housing_id", type="integer", nullable=false)
+     */
+    private $housingId;
+
+    /**
      *
      * @ORM\ManyToOne(targetEntity="App\Entity\Housing")
      * @ORM\JoinColumns({
@@ -55,6 +53,60 @@ class Reservation
      */
     private $housing;
 
+    public function __construct()
+    {
+        $this->housing = new ArrayCollection();
+    }
 
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+
+    /**
+     * Get dateIn
+     *
+     * @return Datetime
+     */
+    public function getDateIn()
+    {
+        return $this->dateIn;
+    }
+
+    /**
+     * Get dateOut
+     *
+     * @return Datetime
+     */
+    public function getDateOut()
+    {
+        return $this->dateOut;
+    }
+
+    /**
+     * Get housingId
+     *
+     * @return integer
+     */
+    public function getHousingId()
+    {
+        return $this->housingId;
+    }
+
+    /**
+     * Get housing
+     *
+     * @return ArrayCollection
+     */
+    public function getHousing()
+    {
+        return $this->housing;
+    }
 }
 
