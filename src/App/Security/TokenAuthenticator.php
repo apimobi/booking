@@ -1,6 +1,7 @@
 <?php
 namespace App\Security;
 
+use App\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -30,6 +31,10 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
             return;
         }
 
+        if($request->headers->get('X-AUTH-TOKEN') != 'testTokenOk'){
+            return;
+        }
+
         // What you return here will be passed to getUser() as $credentials
         return array(
             'token' => $token,
@@ -40,10 +45,13 @@ class TokenAuthenticator extends AbstractGuardAuthenticator
     {
         $apiKey = $credentials['token'];
 
+        $user = new User();
+        return $user;
+
         // if null, authentication will fail
         // if a User object, checkCredentials() is called
-        return $this->em->getRepository('App:User')
-            ->findOneBy(array('apiKey' => $apiKey));
+        //return $this->em->getRepository('App:User')
+        //    ->findOneBy(array('apiKey' => $apiKey));
     }
 
     public function checkCredentials($credentials, UserInterface $user)

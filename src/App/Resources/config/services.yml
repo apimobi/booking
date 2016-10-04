@@ -1,28 +1,21 @@
 services:
-    # app.product:
-    #     class: App\Controller\ProductController
-    #     calls:
-    #         - [setContainer, ['@service_container']]
 
-    app.service.product:
-        class: App\Services\ProductService
+    app.service.search:
+        class: App\Services\SearchService
         arguments:
-          - '@form.factory'
           - '@doctrine'
+          - '@app.service.reservation'
+          - '@app.service.prices'
 
-    app.service.user:
-        class: App\Services\UserService
+    app.service.reservation:
+        class: App\Services\ReservationService
         arguments:
-          - '@form.factory'
           - '@doctrine'
-          - '%secret%'
 
-    app.service.productuser:
-        class: App\Services\ProductUserService
-        arguments :
-          - '@form.factory'
+    app.service.prices:
+        class: App\Services\PricesService
+        arguments:
           - '@doctrine'
-          - '@security.token_storage'
 
     app.token_authenticator:
         class: App\Security\TokenAuthenticator

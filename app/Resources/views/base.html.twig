@@ -22,17 +22,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     {% block body %}
+
+
         <nav>
            <div class="nav-wrapper">
              <a href="#!" class="brand-logo">Logo</a>
              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
              <ul class="right hide-on-med-and-down">
-               <li><a href="{{ path('app_front_user_post') }}">User</a></li>
-               <li><a href="{{ path('app_front_product_post') }}">Product</a></li>
+               <li><a href="{{ path('app_front_search_index') }}">User</a></li>
              </ul>
              <ul class="side-nav" id="mobile-demo">
-               <li><a href="{{ path('app_front_user_post') }}">User</a></li>
-               <li><a href="{{ path('app_front_product_post') }}">Product</a></li>
+               <li><a href="{{ path('app_front_search_index') }}">User</a></li>
              </ul>
            </div>
        </nav>
@@ -42,7 +42,7 @@
             {% block content %}{% endblock %}
       </div>
 
-      
+
 
       {% javascripts filter="?jsqueeze" output="js/app.js"
         "assets/vendor/jquery/dist/jquery.min.js"
