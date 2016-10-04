@@ -41,7 +41,19 @@ class SearchController extends FOSRestController
       *          "dataType"="date",
       *          "description"="2016-10_24",
       *          "required"=false
-      *      }
+      *      },
+     *      {
+     *          "name"="search[price_min]",
+     *          "dataType"="integer",
+     *          "description"="100",
+     *          "required"=false
+     *      },
+     *      {
+     *          "name"="search[price_max]",
+     *          "dataType"="integer",
+     *          "description"="500",
+     *          "required"=false
+     *      }
       * }
       * )
       *
@@ -56,7 +68,9 @@ class SearchController extends FOSRestController
     public function indexAction(Request $request)
     {
         return $this->container->get('app.service.search')->getResults($request->request->get('search')['date_in']
-                                                                     ,$request->request->get('search')['date_out']);
+                                                                       ,$request->request->get('search')['date_out']
+                                                                       ,$request->request->get('search')['price_min']
+                                                                       ,$request->request->get('search')['price_max']);
     }
 
 }

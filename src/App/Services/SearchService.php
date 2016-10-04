@@ -31,7 +31,7 @@ class SearchService
    * @param  Request $request
    * @return Array
    */
-  public function getResults($dateIn, $dateOut)
+  public function getResults($dateIn, $dateOut, $priceMin = 100, $priceMax = 500)
   {
 
       $dateCheckin = new \DateTime($dateIn);
@@ -39,9 +39,9 @@ class SearchService
 
       $availableHousing = $this->reservationService->findAvailablesHousing([1,2,3,4,5,6], $dateCheckin, $dateCheckout);
 
-      dump($availableHousing);
+      //dump($availableHousing);
 
-      $results = $this->priceService->getPrices($availableHousing, $dateCheckin, $dateCheckout);
+      $results = $this->priceService->getPrices($availableHousing, $dateCheckin, $dateCheckout, $priceMin, $priceMax);
 
 
 

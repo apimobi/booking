@@ -45,7 +45,7 @@ class Housing
     /**
      *
      */
-    private $calculatedPrice;
+    private $calculatedPrice = 0;
 
 
     /**

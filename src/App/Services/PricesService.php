@@ -26,19 +26,19 @@ class PricesService
     * @param  Request $request
     * @return Array
     */
-    public function getPrices($housingIds, $dateIn, $dateOut)
+    public function getPrices($housingIds, $dateIn, $dateOut, $priceMin, $priceMax)
     {
         $em = $this->doctrine->getManager();
         $housings = $em->getRepository('App\Entity\Housing')->findAllByIds($housingIds);
-        dump($housings);
+        //dump($housings);
         $arrayPrices = $em->getRepository('App\Entity\Prices')->getPrices($housingIds, $dateIn, $dateOut);
-        dump($arrayPrices);
+        //dump($arrayPrices);
         $nbDays = $dateIn->diff($dateOut)->days;
 
         $prices = $this->buildPrices($nbDays, $arrayPrices, $dateIn, $dateOut);
-        dump($prices);
+        //dump($prices);
 
-        foreach($housings as $housing)
+        foreach($housings as $key=>$housing)
         {
             if(!array_key_exists($housing->getId(), $prices)){
                 $housing->setCalculatedPrice($housing->getDefaultPrice()*$nbDays);
@@ -55,9 +55,13 @@ class PricesService
                 }
                 $housing->setCalculatedPrice($finalPrice);
             }
+
+            if($housing->getCalculatedPrice() < $priceMin ||  $housing->getCalculatedPrice() > $priceMax){
+                unset($housings[$key]);
+            }
         }
 
-        dump($housings);
+        //dump($housings);
         return $housings;
 
     }
@@ -114,7 +118,7 @@ class PricesService
                                                              'days'=>$diff);
             }
 
-            dump($price->getHousingId(), $tab_house[$price->getHousingId()]);
+            //dump($price->getHousingId(), $tab_house[$price->getHousingId()]);
 
         }
 
