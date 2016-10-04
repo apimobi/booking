@@ -23,7 +23,7 @@ class SearchController extends FOSRestController
     public function indexAction(Request $request)
     {
 
-        $result = $this->container->get('app.service.search')->getResults("2016-10-08", "2016-10-20");
+        $result = $this->container->get('app.service.search')->getResults("2016-10-08", "2016-10-20", 100, 10000);
         return [$result];
     }
 

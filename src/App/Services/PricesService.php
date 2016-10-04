@@ -30,13 +30,10 @@ class PricesService
     {
         $em = $this->doctrine->getManager();
         $housings = $em->getRepository('App\Entity\Housing')->findAllByIds($housingIds);
-        //dump($housings);
         $arrayPrices = $em->getRepository('App\Entity\Prices')->getPrices($housingIds, $dateIn, $dateOut);
-        //dump($arrayPrices);
         $nbDays = $dateIn->diff($dateOut)->days;
 
         $prices = $this->buildPrices($nbDays, $arrayPrices, $dateIn, $dateOut);
-        //dump($prices);
 
         foreach($housings as $key=>$housing)
         {
@@ -61,7 +58,6 @@ class PricesService
             }
         }
 
-        //dump($housings);
         return $housings;
 
     }
@@ -95,7 +91,7 @@ class PricesService
         foreach($prices as $price)
         {
 
-            if(!in_array($price->getHousingId(), $tab_house))
+            if(!array_key_exists($price->getHousingId(), $tab_house))
             {
                 $tab_house[$price->getHousingId()] = [];
             }
@@ -103,22 +99,31 @@ class PricesService
             if($dateIn >= $price->getDateStart() && $dateIn <= $price->getDateEnd())
             {
 
-                if($dateOut > $price->getDateEnd())
+                if($dateOut < $price->getDateEnd())
                 {
-                    $diff = $price->getDateEnd()->diff($dateIn)->format("%a");
-                    $tab_house[$price->getHousingId()][] = array('price'=>$diff*$price->{'get'.$periode}(),
-                                                                 'days'=>$diff);
-                }else{
-                    $tab_house[$price->getHousingId()][] = array('price'=>$nbDays*$price->{'get'.$periode}(),
-                                                                 'days'=>$nbDays);
-                }
-            }elseif($dateOut >= $price->getDateStart() && $dateOut <= $price->getDateEnd()){
-                $diff = $price->getDateEnd()->diff($dateOut)->format("%a");
-                $tab_house[$price->getHousingId()][] = array('price'=>$diff*$price->{'get'.$periode}(),
-                                                             'days'=>$diff);
-            }
+                    $tab_house[$price->getHousingId()][] = array('price'=>$nbDays*$price->{'get'.$periode}()
+                                                                 ,'days'=>$nbDays);
 
-            //dump($price->getHousingId(), $tab_house[$price->getHousingId()]);
+                }else{
+                    $diff = $price->getDateEnd()->diff($dateIn)->format("%a")+1;
+                    $tab_house[$price->getHousingId()][] = array('price'=>$diff*$price->{'get'.$periode}(),
+                        'days'=>$diff);
+
+                }
+            }elseif($dateIn < $price->getDateStart() && $dateOut > $price->getDateStart()){
+
+                if($price->getDateEnd() <= $dateOut)
+                {
+                    $diff = $price->getDateStart()->diff($price->getDateEnd())->format("%a")+1;
+                    $tab_house[$price->getHousingId()][] = array('price'=>$diff*$price->{'get'.$periode}()
+                                                                 ,'days'=>$diff);
+                }else{
+                    $diff = $dateOut->diff($price->getDateStart())->format("%a")+1;
+                    $tab_house[$price->getHousingId()][] = array('price'=>$diff*$price->{'get'.$periode}()
+                                                                 ,'days'=>$diff);
+                }
+
+            }
 
         }
 
